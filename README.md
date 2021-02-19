@@ -1,6 +1,8 @@
 # etch-a-sketch
 Etch-A-Sketch program from The Odin Project.
 
+[Click here to see it live!](https://cl16.github.io/etch-a-sketch/)
+
 * Mouse button must be clicked down to change tile colour.
 
 This project provided general prompts but not specific instructions on
