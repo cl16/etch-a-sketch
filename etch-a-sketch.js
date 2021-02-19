@@ -26,15 +26,26 @@ function redraw (tilesPerSide) {
         tempDiv.className = "tile";
         tempDiv.setAttribute('style', 'border: 1px solid black; height: auto; width: auto;');
         
+        
         tempDiv.addEventListener('mouseover', function (e) {
             if (e.buttons > 0) {
-                tempDiv.setAttribute('style', 'background-color: black;');
+                let tempColour = randomColour();
+                tempDiv.setAttribute('style', `background-color: ${tempColour};`);
+                console.log(tempColour);
             }
         });
     
         container.appendChild(tempDiv);
     }
 
+}
+
+const colourList = ["#A93226", "#CB4335", "#884EA0", "#7D3C98", "#148F77", "#117A65", "#1E8449", "#239b56",
+                    "#B7950B", "#B9770E", "#AF601A", "#A04000", "#717D7E", "#616A6B", "#283747", "#212F3D"]
+
+function randomColour () {
+    const hexCode = colourList[Math.floor(Math.random()*colourList.length)];
+    return hexCode;
 }
 
 redraw(16);
